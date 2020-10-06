@@ -5,32 +5,639 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flac Hoppeland</title>
     <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        p{
+            text-align: center
+        }
+/*kop*/
+
+        @font-face {
+            font-family: font1;
+            src: url(berlin-sans-fb-demi-bold.TTF) ;
+        }
+        h1{
+            font-size: 80px;
+            color: white;
+            font-family: font1, Helvetica, sans-serif;
+            margin: 0;
+            float: left;
+        }
+
+        header{
+            background-color: rgb(247, 209, 23);
+            text-align: center;
+            position: static;
+        }
         
+        .float-left{
+            float: left;
+        }
+        #header{
+            overflow: hidden;
+            width: 100%;
+            margin: auto;
+        }
+        #header h1{
+            width: 30%;
+        }
+        #logo{
+          overflow: hidden;
+          width: 20%;
+        }
+
+        #logo img{
+            height: auto;
+            width: 100%;
+        }
+
+
+        .yeloline{ 
+            background-color: rgb(255, 230, 0);
+            height: 5px;
+            width: 100%;
+        }
+
+/*code nav*/
+        nav{
+        overflow: hidden;
+        background-color: black;
+        font-family: Arial;
+        }
+        nav a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+        .dropdown {
+        float: right;
+        overflow: hidden;
+        }      
+        .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font: inherit;
+        margin: 0;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: black;
+        }
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        width: 100%;
+        left: 0;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+        .dropdown-content .header {
+        background: black;
+        padding: 16px;
+        color: white;
+        }
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+        .column {
+        float: left;
+        padding: 10px;
+        background-color: #ccc;
+        height: 400px;
+        width: 100%;
+        }
+        .column a {
+        float: none;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+        .column a:hover {
+        background-color: #ddd;
+        }
+        .row{
+        display: flex;
+        }
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+/*code blokken met hover effect*/        
+        .container {
+            position: relative;
+            width: 33%;
+            height: 200px;
+            margin: 1px;
+            float: left;
+            background-color: rgb(236, 236, 236);
+            }
+
+        .underlay{
+            position: absolute;
+            text-align: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 1;
+            transition: .5s ease;
+            }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: gray;
+            overflow: auto;
+            justify-content: center;
+            }
+        
+            .container .overlay div{
+               display: flex;
+               flex-direction: row; 
+               justify-content:center;
+               height: 50%;
+            }
+
+        .container:hover .overlay{
+            opacity: 1;
+        }  
+        
+        h2 {
+          font-size: 40px;
+          color: black; 
+        }   
+
+        .container .btn {
+            position: relative;
+            background-color: #f1f1f1;
+            color: black;
+            margin: 5% 0;
+            font-size: 16px;
+            padding: 16px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }   
+
+        .container .btn:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        
+
+/*code sponsers*/
+        * {box-sizing:border-box}
+
+        /* Slideshow container */
+            .slideshow-sponsers {
+            max-width: 250px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+             display: none;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Number text (1/33 etc) */
+            .numbertext {
+            color: #000000;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+            .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+            .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+            .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 3s;
+            animation-name: fade;
+            animation-duration: 3s;
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="http://www.flachoppeland.be/images/LogoFLAC.jpg" alt="logo van de flachoppeland">
-        <h1>FLAChoeppeland</h1>
-        
-        
-        <nav>
-                        
-        </nav>
-    </header>
-    <main>
-        <div>
-
+        <div id="header">
+            <figure class="float-left" id="logo">
+                <a href="index.html" class="float-left"><img src="logo.png" alt="logo van de flachoppeland"></a>
+            </figure>   
+            <h1>FLAC Hoppeland</h1>
         </div>
+        <div class="yelowline">
+            <br>
+        </div>
+        <nav>
+          <div class="dropdown">
+              <button class="dropbtn">Dropdown 
+                  <i class="fa fa-caret-down"></i>
+              </button>
+                <div class="dropdown-content"> 
+                        <div class="row">
+                          <div class="column">
+                            <h3>Sportief</h3>
+                            <a href="#">Categorieen</a>
+                            <a href="#">Jeugd</a>
+                            <a href="#">Competitieven</a>
+                            <a href="#">Joggers</a>
+                            <a href="#">Start to run</a>
+                            <a href="#">G-werking</a>
+                          </div>
+                          <div class="column">
+                            <h3>Organisatie</h3>
+                            <a href="#">Bestuur</a>
+                            <a href="#">Trainers</a>
+                            <a href="#">Thuisbasis</a>
+                            <a href="#">Uitrusting</a>
+                            <a href="#">Inschrijven</a>
+                          </div>
+                          <div class="column">
+                            <h3>Clubleven</h3>
+                            <a href="#">Kalender</a>
+                            <a href="#">Verslagen</a>
+                            <a href="#">Foto's</a>
+                            <a href="#">Club-shop</a>
+                          </div>
+                          <div class="column">
+                            <h3>Resultaten</h3>
+                            <a href="#">Clubrecords</a>
+                            <a href="#">Criteriums</a>
+                            <a href="#">Wedstrijden</a>
+                          </div>
+                          <div class="column">
+                            <h3>Archief</h3>
+                            <a href="#">Oudere gegevens</a>
+                            <a href="#">2017</a>
+                          </div>
+                          <div class="column">
+                            <h3>Links</h3>
+                            <a href="#">Andere atletiekclubs</a>
+                            <a href="#">Atleten</a>
+                          </div>
+                        </div>
+                </div>
+          </div>              
+      </nav>
+    </header>
+    <main style="margin-left: 12.5%; margin-right: 12.5%;">
+        <div >
+            <div class="container">
+                <div class="underlay">
+                    <h2>
+                        Voor Wie?
+                    </h2> 
+                </div>
+                <div class="overlay">
+                    <p style="color: white;
+                    margin-top: 70px; font-size: 20px;">
+                    Van recreatieve loper tot topatleet.
+                    Vanaf het derde kleuter kunt u op de clubtrainingen 
+                    <strong>spelenderwijs</strong> atletiekvaardigheden aanleren. </p> 
+                </div>
+            </div>
+              
+            <div class="container">
+                <div class="underlay">
+                    <h2>
+                        Welkom
+                    </h2> 
+                </div>
+                <div class="overlay">
+                    <p style="color: white;
+                    margin-top: 70px; font-size: 20px;">
+                        Welkom bij atletiekclub Poperinge, die er is voor klein en groot. 
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="underlay">
+                    <h2>
+                        Inschrijven
+                    </h2> 
+                </div>
+                <div class="overlay">
+                    <div>
+                        <button href="https://forms.gle/vUhEL62siPSP2cQe9" class="btn" > Verlenging lidmaatschap</button>
+                    </div>
+                    <div>
+                        <button href="https://forms.gle/WUCsUrwF4wQjjZsAA" class="btn" > Nieuwe leden</button>
+                    </div>
+                </div>
+            </div>            
+            <div class="container">
+                <div class="underlay">
+                    <h2>
+                        Wat is atletiek?
+                    </h2> 
+                </div>
+                <div class="overlay">
+                    <p style="color: white;
+                    margin-top: 70px; font-size: 20px;">
+                        Atletiek is een sport waar er zowel conditie als techniek belangrijk zijn.
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <img src="groepsfoto.jpg" 
+                alt="groeps foto" style="height: 100%; margin-left: 15%;">
+            </div>
+
+            <div class="container">
+                <iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=Reningelstseweg%2020&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div> 
+        </div>
+        
     </main>
-    <footer>
+    <footer style="margin-left: 12.5%; margin-right: 12.5%;">
         <p>
             <img src="http://www.flachoppeland.be/images/Dvits.png" alt="" heigt="175" width="162">
             <img src="http://www.flachoppeland.be/images/Cobo.jpg" alt="" heigt="174" width="122">
-            <img src="" alt="">
         </p>
-
+        <p>
+            Met dank aan onze sponser! <br>
+            Gemaakt door de vurige badeentjes.
+            <img style="height: 10px;" src="https://media1.tenor.com/images/11771d5e9e588e5d99052acdf63512ee/tenor.gif">
+        </p>
+        <div class="slideshow-sponsers">
+            <div class="mySlides fade">
+                <a href="http://www.vulsteke-verbeke.be/">
+                <div class="numbertext">1 / 33</div>
+                <img src="http://www.flachoppeland.be/images/VulstekeVerbeke.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.finfacts.be/">
+                <div class="numbertext"> 2 / 33</div>
+                <img src="http://www.flachoppeland.be/images/finfacts.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.page.be/">
+                <div class="numbertext"> 3 / 33</div>
+                <img src="http://www.flachoppeland.be/images/page.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.delhaizepop.be/">
+                <div class="numbertext"> 4 / 33</div>
+                <img src="http://www.flachoppeland.be/images/addelhaize.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.decapmaker.be/">
+                <div class="numbertext">5 / 33</div>
+                <img src="http://www.flachoppeland.be/images/decapmaker.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.electrocappoen.be/">
+                <div class="numbertext">6 / 33</div>
+                <img src="http://www.flachoppeland.be/images/elektrocappoen.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.staelensrecup.be/">
+                <div class="numbertext">7 / 33</div>
+                <img src="http://www.flachoppeland.be/images/staelen-recup.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://garage.peugeot.be/duran-poperinge">
+                <div class="numbertext">8 / 33</div>
+                <img src="http://www.flachoppeland.be/images/peugeot.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.renoma.be/">
+                <div class="numbertext">9 / 33</div>
+                <img src="http://www.flachoppeland.be/images/renoma.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.schoen-sportcenter.be/">
+                <div class="numbertext">10 / 33</div>
+                <img src="http://www.flachoppeland.be/images/schoencenter.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.drukkerijschoonaert.be/">
+                <div class="numbertext">11 / 33</div>
+                <img src="http://www.flachoppeland.be/images/schoonaert.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.restaurantterminus.be/">
+                <div class="numbertext"> 12/ 33</div>
+                <img src="http://www.flachoppeland.be/images/terminus.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.vandeputteinterieur.be/">
+                <div class="numbertext"> 13 / 33</div>
+                <img src="http://www.flachoppeland.be/images/vandeputte.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.vandermarlierenv.be/">
+                <div class="numbertext"> 14 / 33</div>
+                <img src="http://www.flachoppeland.be/images/vandermarliere.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.pmo-service.be/">
+                <div class="numbertext">15 / 33</div>
+                <img src="http://www.flachoppeland.be/images/pmo.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.garage-delanote.be/">
+                <div class="numbertext">16 / 33</div>
+                <img src="http://www.flachoppeland.be/images/delanote.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.alu-lermytte.be/">
+                <div class="numbertext">17 / 33</div>
+                <img src="http://www.flachoppeland.be/images/alulermytte.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.belfius.be/">
+                <div class="numbertext">18 / 33</div>
+                <img src="http://www.flachoppeland.be/images/belfius.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.madeininox.be/">
+                <div class="numbertext">19 / 33</div>
+                <img src="http://www.flachoppeland.be/images/madeininox.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.drafab.be/">
+                <div class="numbertext">20 / 33</div>
+                <img src="http://www.flachoppeland.be/images/drafab.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.timotuin.be/">
+                <div class="numbertext">21 / 33</div>
+                <img src="http://www.flachoppeland.be/images/timotuin.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.kbc.be/">
+                <div class="numbertext">22 / 33</div>
+                <img src="http://www.flachoppeland.be/images/kbc.gif" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.boligna.be/">
+                <div class="numbertext">23 / 33</div>
+                <img src="http://www.flachoppeland.be/images/sponsorlogos/Boligna.png/" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.transagrobouton.be/">
+                <div class="numbertext">24 / 33</div>
+                <img src="http://www.flachoppeland.be/images/sponsorlogos/Bouton.png" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.derooconstructie.be/">
+                <div class="numbertext">25 / 33</div>
+                <img src="http://www.flachoppeland.be/images/sponsorlogos/DerooConstructie.png" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.eskimoo.be/">
+                <div class="numbertext">26 / 33</div>
+                <img src="http://www.flachoppeland.be/images/sponsorlogos/Eskimo.png" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.hoteldelapaix.be/">
+                <div class="numbertext">27 / 33</div>
+                <img src="http://www.flachoppeland.be/images/sponsorlogos/HoteldelaPaix.png" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.hsbdevos.be/">
+                <div class="numbertext">28 / 33</div>
+                <img src="http://www.flachoppeland.be/images/sponsorlogos/HoutskeletbouwDevos.png" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.optieklobelle.be/">
+                <div class="numbertext">29 / 33</div>
+                <img src="http://www.flachoppeland.be/images/sponsorlogos/OptiekLobelle.png" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.traiteurpure.be/">
+                <div class="numbertext">30 / 33</div>
+                <img src="http://www.flachoppeland.be/images/sponsorlogos/TraiteurPure.png" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.verpoortbouw.be/">
+                <div class="numbertext">31 / 33</div>
+                <img src="http://www.flachoppeland.be/images/sponsorlogos/Verpoort.png" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.decrockgranenbonduelle.be/">
+                <div class="numbertext">32 / 33</div>
+                <img src="http://www.flachoppeland.be/images/sponsorlogos/Decrock_WG.png" style="width:100%">
+                </a>
+            </div>
+            <div class="mySlides fade">
+                <a href="http://www.interieurdejonckheere.be/">
+                <div class="numbertext">33 / 33</div>
+                <img src="http://www.flachoppeland.be/images/sponsorlogos/Dejonckheere.JPG" style="width:100%">
+                </a>
+        <div>
+        <br>
+        <p>
+            Met dank aan onze sponser! <br>
+            Gemaakt door de vurige badeentjes.
+            <img styl="width: 100%; height: auto" src="https://media1.tenor.com/images/11771d5e9e588e5d99052acdf63512ee/tenor.gif">
+        </p>
     </footer>
+    <script>
+        var slideIndex = 0;
+        showSlides();
 
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+                }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 4000); // veranderd per 4 seconden
+        }
+    </script>
 </body>
 </html>
+
+
