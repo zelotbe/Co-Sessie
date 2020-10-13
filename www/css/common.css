@@ -1,0 +1,158 @@
+
+/*rem instelling*/
+body{
+  font-size: 62.5%;
+}
+
+
+/*kop*/
+
+@font-face {
+  font-family: myfont;
+  src: url(berlin-sans-fb-demi-bold.TTF);}
+
+ 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
+  
+
+
+.title{
+  margin-top: 20px;
+  font-size: 10rem;
+}
+
+.title h1{
+  font-size: 4rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color:black;
+}
+
+header {
+  
+  text-align: center;
+  position: static;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  background-color: rgb(247, 209, 23);
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+#logo {
+  overflow: hidden;
+}
+
+#logo img {
+    height: 100px;
+}
+
+.blackline {
+  background-color: rgb(27, 27, 27);
+  height: 5px;
+  padding: 0px;
+}
+
+.nv{
+  width: 75%; 
+}
+
+.nav-link{
+  padding: 10px 40px;
+  border-radius: 0.2rem;
+  border-color: rgb(247, 209, 23);
+  background-color: rgb(247, 209, 23);
+  margin: 0.1rem 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.nav-link:hover{
+  color: white;
+  background-color: rgb(255, 224, 66);
+}
+
+
+
+
+/*code sponsers*/
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-sponsers {
+  max-width: 250px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/33 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

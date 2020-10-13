@@ -1,0 +1,266 @@
+body{
+            margin: 0;
+            padding: 0;
+        }
+
+        p{
+            text-align: center
+        }
+/*kop*/
+
+        @font-face {
+            font-family: font1;
+            src: url(berlin-sans-fb-demi-bold.TTF) ;
+        }
+        h1{
+            font-size: 80px;
+            color: white;
+            font-family: font1, Helvetica, sans-serif;
+            margin: 0;
+            float: left;
+        }
+
+        header{
+            background-color: rgb(247, 209, 23);
+            text-align: center;
+            position: static;
+        }
+        
+        .float-left{
+            float: left;
+        }
+        #header{
+            overflow: hidden;
+            width: 100%;
+            margin: auto;
+        }
+        #header h1{
+            width: 30%;
+        }
+        #logo{
+          overflow: hidden;
+          width: 20%;
+        }
+
+        #logo img{
+            height: auto;
+            width: 100%;
+        }
+
+
+        .yeloline{ 
+            background-color: rgb(255, 230, 0);
+            height: 5px;
+            width: 100%;
+        }
+
+/*code nav*/
+        nav{
+        overflow: hidden;
+        background-color: black;
+        font-family: Arial;
+        }
+        nav a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        }
+        .dropdown {
+        float: right;
+        overflow: hidden;
+        }      
+        .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font: inherit;
+        margin: 0;
+        }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: black;
+        }
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        width: 100%;
+        left: 0;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+        .dropdown-content .header {
+        background: black;
+        padding: 16px;
+        color: white;
+        }
+        .dropdown:hover .dropdown-content {
+        display: block;
+        }
+        .column {
+        float: left;
+        padding: 10px;
+        background-color: #ccc;
+        height: 400px;
+        width: 100%;
+        }
+        .column a {
+        float: none;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        }
+        .column a:hover {
+        background-color: #ddd;
+        }
+        .row{
+        display: flex;
+        }
+        .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+/*code blokken met hover effect*/        
+        .container {
+            position: relative;
+            width: 33%;
+            height: 200px;
+            margin: 1px;
+            float: left;
+            background-color: rgb(236, 236, 236);
+            }
+
+        .underlay{
+            position: absolute;
+            text-align: center;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 1;
+            transition: .5s ease;
+            }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: gray;
+            overflow: auto;
+            justify-content: center;
+            }
+        
+            .container .overlay div{
+               display: flex;
+               flex-direction: row; 
+               justify-content:center;
+               height: 50%;
+            }
+
+        .container:hover .overlay{
+            opacity: 1;
+        }  
+        
+        h2 {
+          font-size: 40px;
+          color: black; 
+        }   
+
+        .container .btn {
+            position: relative;
+            background-color: #f1f1f1;
+            color: black;
+            margin: 5% 0;
+            font-size: 16px;
+            padding: 16px 30px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }   
+
+        .container .btn:hover {
+            background-color: black;
+            color: white;
+        }
+        
+        
+
+/*code sponsers*/
+        * {box-sizing:border-box}
+
+        /* Slideshow container */
+            .slideshow-sponsers {
+            max-width: 250px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+             display: none;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Number text (1/33 etc) */
+            .numbertext {
+            color: #000000;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+            .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+            .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+            .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 3s;
+            animation-name: fade;
+            animation-duration: 3s;
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
