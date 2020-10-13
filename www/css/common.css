@@ -4,6 +4,25 @@ body{
   font-size: 62.5%;
 }
 
+/*achtergrond image optioneel
+
+body  {
+  background-image: 
+    linear-gradient(
+      rgba(131, 131, 131, 0.5),
+      rgba(131, 131, 131, 0.5)
+    )
+  ,url("../images/background_piste.png");
+  background-repeat: repeat;  
+  background-attachment: fixed;
+}
+
+*/
+
+body{
+  background-color: #fff6d9a8;
+}
+
 
 /*kop*/
 
@@ -37,7 +56,7 @@ header {
 }
 
 #header {
-  background-color: rgb(247, 209, 23);
+  background-color: #EB8028;
   overflow: hidden;
   width: 100%;
   margin: auto;
@@ -55,7 +74,7 @@ header {
 }
 
 .blackline {
-  background-color: rgb(27, 27, 27);
+  background-color:#D44719;
   height: 5px;
   padding: 0px;
 }
@@ -67,8 +86,8 @@ header {
 .nav-link{
   padding: 10px 40px;
   border-radius: 0.2rem;
-  border-color: rgb(247, 209, 23);
-  background-color: rgb(247, 209, 23);
+  border-color: #EB8028;
+  background-color:#EB8028;
   margin: 0.1rem 0.5rem;
   color: white;
   font-size: 1.2rem;
@@ -76,10 +95,12 @@ header {
 
 .nav-link:hover{
   color: white;
-  background-color: rgb(255, 224, 66);
+  background-color:#FFA812
 }
 
-
+.here {
+  background-color: #D44719;
+}
 
 
 /*code sponsers*/
