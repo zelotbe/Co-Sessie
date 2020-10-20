@@ -1,8 +1,36 @@
-.card-header{
+.card-header {
     background-color: #EB8028 !important;
     color: white !important;
 }
-.btn-primary{
+
+.btn-primary {
     background-color: #D44719 !important;
+    border: none !important;
 }
 
+.organisatie {
+    color: #EB8028;
+    height: 500px;
+    background-color: transparent;
+    transition: all 0.5s ease;
+}
+
+.organisatie:hover {
+    color: black;
+    background-color: #EB8028;
+    background-blend-mode: screen;
+}
+
+#bestuur {
+    background-image: url(../images/bestuur.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#trainers{
+    background-image: url(../images/trainer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.row *{
+    align-content: space-between;
+}

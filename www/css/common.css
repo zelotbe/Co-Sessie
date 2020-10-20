@@ -37,14 +37,15 @@ body{
 
 .title{
   margin-top: 20px;
-  font-size: 10rem;
 }
 
 .title h1{
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color:black;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1), 
+               0px 0px 8px rgba(240, 224, 59, 1);
 }
 
 header {
@@ -81,21 +82,23 @@ header {
 
 .nav-link{
   padding: 10px 40px;
-  border-radius: 0.2rem;
+  border-radius: 1rem;
   border-color: #EB8028;
   background-color:#EB8028;
   margin: 0.1rem 0.5rem;
   color: white;
   font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .nav-link:hover{
-  color: white;
   background-color:#FFA812;
+  color: white;
 }
 
 .here {
   background-color: #D44719;
+  color: white;
 }
 
 

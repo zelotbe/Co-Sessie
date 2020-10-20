@@ -1,0 +1,95 @@
+body, main{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.2rem;
+	width: 100%;
+	height: 100%;
+}
+header{
+	width: 50%;
+	margin: auto;
+}
+main>div{
+	width: 50%;
+	margin: auto;
+	border: 1px solid grey;
+	border-radius: 4px;
+	background-color: #D6C936;
+}
+main>div>div{
+	display:flex;
+}
+h1{
+	padding: 10px;
+	text-align: left;
+	font-size: 2rem;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #B0A52C;
+	color: white;
+}
+p{
+	line-height: 1.5em;
+}
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+width: 50%;
+}
+li {
+font: 1.2rem/1.5 Helvetica, Verdana, sans-serif;
+line-height: 3em;
+text-decoration: none;
+color: #000;
+display: block;
+-webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+-moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+-o-transition: font-size 0.3s ease, background-color 0.3s ease;
+-ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+transition: font-size 0.3s ease, background-color 0.3s ease;
+border-radius: 4px;
+text-align: center;
+}
+li:hover {
+font-size: 1.5rem;
+background: #EB8028;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+a:hover{
+	color: white;
+}
+#hoeden{
+	width: 50%;
+}
+#hoedgroot{
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 200px;
+}
+#hoedgroot>img{
+	width: 100%;
+}
+#hoedklein{
+	display: flex;
+	margin-left: 12.5%; 
+	width: 15%;
+	padding: 100px 0px;
+}
+#hoedklein>img:hover{
+	border-bottom: maroon solid 3px;
+}
+#hoedklein>img{
+	width: 100%;
+}
+#flex{
+	display: flex;
+}
+#h2pagina3{
+	font-size: 4em;
+}
+#h3pagina3{
+	font-size: 3em;
+	margin-top: 40px;
+}
