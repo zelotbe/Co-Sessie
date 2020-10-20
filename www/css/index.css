@@ -19,6 +19,12 @@ main{
     font-size: 1.4rem;
 }
 
+/*img svg*/
+.svg{
+    height: 300px;
+    width: auto;
+}
+
 
 /*code news*/        
 .news{
