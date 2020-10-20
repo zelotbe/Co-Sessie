@@ -37,11 +37,10 @@ body{
 
 .title{
   margin-top: 20px;
-  font-size: 10rem;
 }
 
 .title h1{
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color:black;
