@@ -82,21 +82,23 @@ header {
 
 .nav-link{
   padding: 10px 40px;
-  border-radius: 0.2rem;
+  border-radius: 1rem;
   border-color: #EB8028;
   background-color:#EB8028;
   margin: 0.1rem 0.5rem;
   color: white;
   font-size: 1.2rem;
+  font-weight: 700;
 }
 
 .nav-link:hover{
-  color: white;
   background-color:#FFA812;
+  color: white;
 }
 
 .here {
   background-color: #D44719;
+  color: white;
 }
 
 
