@@ -198,6 +198,7 @@ header {
 footer {
     background-color: #EB8028;
     padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .carousel-control-next,
