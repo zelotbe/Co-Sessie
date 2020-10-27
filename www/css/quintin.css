@@ -9,14 +9,14 @@
 }
 
 .organisatie {
-    color: #EB8028;
+    color: #EB8028 !important;
     height: 500px;
     background-color: transparent;
     transition: all 0.5s ease;
 }
 
 .organisatie:hover {
-    color: black;
+    color: black !important;
     background-color: #EB8028;
     background-blend-mode: screen;
 }
