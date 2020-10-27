@@ -80,6 +80,8 @@ header {
   padding: 0px;
 }
 
+
+/*nav-items*/
 .nav-link{
   padding: 10px 40px;
   border-radius: 1rem;
@@ -94,6 +96,15 @@ header {
 .nav-link:hover{
   background-color:#FFA812;
   color: white;
+}
+
+.dropdown-menu{
+  border-radius: .5rem;
+  background-color:#FFA812;
+}
+
+.dropdown-item:hover{
+ background-color: #f5CA38;
 }
 
 .here {
