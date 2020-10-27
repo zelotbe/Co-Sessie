@@ -198,6 +198,10 @@ header {
 footer {
     background-color: #EB8028;
     padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    border-top:0.25rem solid;
+    border-color: #D44719;
 }
 
 .carousel-control-next,
@@ -207,22 +211,6 @@ footer {
     opacity: 0;
 }
 
-.facebook {
-    font-size: 2.4rem;
-    color: #4267B2;
-}
-
-.facebook a {
-    color: black;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.badeendjes {
-    margin: 2rem 0rem;
-    color: black;
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1.1rem;
-    font-weight: 500;
+.row {
+        margin-left: 0rem;
 }
