@@ -35,3 +35,9 @@
 .row *{
     align-content: space-between;
 }
+.tekstkleur{
+    color: #EB8028 !important;
+}
+.card .card-body .card-text a{
+   text-decoration: underline;
+}
