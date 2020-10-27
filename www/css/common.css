@@ -187,3 +187,42 @@ header {
     opacity: 1;
   }
 }
+
+.carousel-item img {
+    width: 225px;
+    height: 150px;
+    object-fit: contain;
+    background-color: #EB8028;
+}
+
+footer {
+    background-color: #EB8028;
+    padding-top: 2rem;
+}
+
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+    opacity: 0;
+}
+
+.facebook {
+    font-size: 2.4rem;
+    color: #4267B2;
+}
+
+.facebook a {
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.badeendjes {
+    margin: 2rem 0rem;
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
