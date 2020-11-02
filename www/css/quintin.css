@@ -41,3 +41,6 @@
 .card .card-body .card-text a{
    text-decoration: underline;
 }
+.w-30{
+    width: 33%;
+}
