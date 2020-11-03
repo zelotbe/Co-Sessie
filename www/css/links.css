@@ -16,7 +16,7 @@ a:hover {
 
 /*code welkom*/
 .links h2 {
-    color: #EB8028;
+    color: #EB8028 !important;
     font-weight: 700;
     margin-top: 3.0rem;
     margin-bottom: 0rem;
@@ -36,7 +36,7 @@ h2 {
 }
 
 .list-group-item.active {
-    background-color: #EB8028;
+    background-color: #EB8028 !important;
 }
 
 .list-group {
