@@ -74,6 +74,13 @@ header {
     height: 100px;
 }
 
+.button{
+  background-color: #D44719;
+  border-color: #D44719;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
 .blackline {
   background-color:#D44719;
   height: 5px;
