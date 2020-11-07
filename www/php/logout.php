@@ -12,3 +12,7 @@ session_destroy();
 header("location: login.php");
 exit;
 ?>
+
+<!-- Source PHP
+https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
+-->
