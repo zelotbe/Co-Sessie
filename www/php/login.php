@@ -88,6 +88,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
 
+
+<!-- Source -->
+https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
+<!---->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
