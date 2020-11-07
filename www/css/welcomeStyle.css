@@ -1,0 +1,16 @@
+*
+{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+a{
+    font-size: 1.6rem;
+}
+
+.jumbotron{
+    background-color: #EB8028;
+}
