@@ -124,8 +124,8 @@ if (isset($_POST['submit'])) {
 <body>
     <header class="justify-content-md-center">
         <div id="header" class="row">
-            <div class="col-md-2 col-xs-0"></div>
-            <figure class="col-md-2 col-xs-12" id="logo">
+            <div class="col-lg-1 col-md-0"></div>
+            <figure class="col-lg-2 col-md-12" id="logo">
                 <a href="index.html"><img src="images/logo.png" alt="logo van de flachoppeland" /></a>
             </figure>
             <div class="col-md-6 title">
@@ -154,6 +154,8 @@ if (isset($_POST['submit'])) {
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="organisatie/trainers.html">TRAINERS</a>
                             <a class="dropdown-item" href="organisatie/bestuur.html">BESTUUR</a>
+                            <a class="dropdown-item" href="inschrijven.php">INSCHRIJVEN</a>
+                            <a class="dropdown-item" href="organisatie/kalender.html">KALENDER</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
