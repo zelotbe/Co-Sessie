@@ -28,7 +28,6 @@ $gemeente = isset($_POST['gemeente']) ? (string) $_POST['gemeente'] : '';
 $postcode = isset($_POST['postcode']) ? (string) $_POST['postcode'] : '';
 $geboortedatum = isset($_POST['geboortedatum']) ? (string) $_POST['geboortedatum'] : '';
 $geboorteplaats = isset($_POST['geboorteplaats']) ? (string) $_POST['geboorteplaats'] : '';
-$geslacht = isset($_POST['geslacht']) ? (string) $_POST['geslacht'] : '';
 $nationaliteit = isset($_POST['nationaliteit']) ? (string) $_POST['nationaliteit'] : '';
 $gsm = isset($_POST['gsm']) ? (string) $_POST['gsm'] : '';
 $msgName = '*';
@@ -73,10 +72,6 @@ if (isset($_POST['submit'])) {
 		$msgMessage = 'Gelieve een geboorteplaats in te voeren';
 		$allOk = false;
 	}
-    if (trim($geslacht) === '') {
-		$msgMessage = 'Gelieve een geslacht in te voeren';
-		$allOk = false;
-	}
      if (trim($nationaliteit) === '') {
 		$msgMessage = 'Gelieve een nationaliteit in te voeren';
 		$allOk = false;
@@ -88,12 +83,12 @@ if (isset($_POST['submit'])) {
 
 	// end of form check. If $allOk still is true, then the form was sent in correctly
 	if ($allOk) {
-		$stmt = $db->prepare('INSERT INTO leden (voornaam, achternaam, mail, adres, gemeente, postcode, geboortedatum, geboorteplaats, geslacht, nationaliteit, gsm) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
-        $stmt->execute(array($voornaam, $achternaam, $mail, $adres, $gemeente, $postcode, $geboortedatum, $geboorteplaats, $geslacht, $nationaliteit, $gsm));
+		$stmt = $db->prepare('INSERT INTO leden (voornaam, achternaam, mail, adres, gemeente, postcode, geboortedatum, geboorteplaats, nationaliteit, gsm) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+        $stmt->execute(array($voornaam, $achternaam, $mail, $adres, $gemeente, $postcode, $geboortedatum, $geboorteplaats, $nationaliteit, $gsm));
 
 		// the query succeeded, redirect to this very same page
 		if ($db->lastInsertId() !== 0) {
-			echo 'Twerkt';
+			header('Location: inschrijven_compleet.html');
 			exit();
 		}
 
@@ -182,41 +177,40 @@ if (isset($_POST['submit'])) {
         <div></div>
     </header>
     <main>
-            <h2 class="text-center mt-5">Inschrijven</h2>
+            <h2 class="text-center mt-5">Inschrijven 2020-2021</h2>
             <h3 class="text-center mb-5">Voor nieuwe leden!</h3>
             <div class="container w-50 mx-auto">
                 <form class="form-signin mt-4" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="on">
                     <div class="row justify-content-lg-center">
-                        <input type="text" name="voornaam" class="form-control col-lg-5" placeholder="Voornaam" autofocus required>
-                        <input type="text" name="achternaam" class="form-control offset-lg-1 col-lg-5" placeholder="Achternaam" required>
+                        <input type="text" name="voornaam" class="form-control col-lg-5" placeholder="Voornaam" value="<?php echo htmlentities($voornaam); ?>" autofocus required>
+                        <input type="text" name="achternaam" class="form-control offset-lg-1 col-lg-5" placeholder="Achternaam" value="<?php echo htmlentities($achternaam); ?>" required>
+                        
                     </div>
                     <div class="row justify-content-lg-center">
-                        <input type="email" name="mail" class="form-control col-lg-11 mt-3" placeholder="E-mail" required>
-                        <input type="tel" name="gsm" class="form-control col-lg-11 mt-3" placeholder="Telefoonnummer" required>
+                        <input type="email" name="mail" class="form-control col-lg-11 mt-3" placeholder="E-mail" value="<?php echo htmlentities($mail); ?>" required>
+                        <input type="tel" name="gsm" class="form-control col-lg-11 mt-3" placeholder="Telefoonnummer" value="<?php echo htmlentities($gsm); ?>" required>
+                        
                     </div>
 
                     <div class="row justify-content-lg-center">
-                        <input type="text" name="adres" class="form-control col-lg-11 mt-3" placeholder="Adres + nummer" required>
+                        <input type="text" name="adres" class="form-control col-lg-11 mt-3" placeholder="Adres + nummer" required value="<?php echo htmlentities($adres); ?>">
+                        
                     </div>
                     <div class="row justify-content-lg-center">
-                        <input type="text" name="gemeente" class="form-control col-lg-5 mt-3" placeholder="Gemeente" required>
-                        <input type="text" name="postcode" class="form-control offset-lg-1 col-lg-5 mt-3" placeholder="Postcode" required>
+                        <input type="text" name="gemeente" class="form-control col-lg-5 mt-3" placeholder="Gemeente" value="<?php echo htmlentities($gemeente); ?>" required>
+                        <input type="text" name="postcode" class="form-control offset-lg-1 col-lg-5 mt-3" placeholder="Postcode" value="<?php echo htmlentities($postcode); ?>" required>
+                        
                     </div>
                     <div class="row justify-content-lg-center">
-                        <input type="date" name="geboortedatum" class="form-control col-lg-5 mt-3" placeholder="Geboortedatum" required>
-                        <input type="text" name="geboorteplaats" class="form-control offset-lg-1 col-lg-5 mt-3" placeholder="Geboorteplaats" required>
+                        <input type="date" name="geboortedatum" class="form-control col-lg-5 mt-3" placeholder="Geboortedatum"value="<?php echo htmlentities($geboortedatum); ?>" required>
+                        <input type="text" name="geboorteplaats" class="form-control offset-lg-1 col-lg-5 mt-3" placeholder="Geboorteplaats" value="<?php echo htmlentities($geboorteplaats); ?>" required>
+                        
                     </div>
                     <div class="row justify-content-lg-center">
-                        <input type="text" name="nationaliteit" class="form-control col-lg-11 mt-3" placeholder="Nationaliteit" required>
+                        <input type="text" name="nationaliteit" class="form-control col-lg-11 mt-3" placeholder="Nationaliteit" value="<?php echo htmlentities($nationaliteit); ?>" required>
+                        
                     </div>
-                    <div class="form-group justify-content-lg-center">
-                        <label for="geslacht" class="ml-3 mt-3">Geslacht:</label>
-                        <input type="radio" class="" value="man" name="geslacht" id="man">
-                        <label for="man">Man</label>
-                        <input type="radio" class="" value="vrouw" name="geslacht" id="vrouw">
-                        <label for="vrouw">Vrouw</label>
-                    </div>
-                    <div class="row justify-content-lg-center">
+                    <div class="row justify-content-lg-center mt-5">
                         <input type="submit" class="btn btn-lg btn-primary btn-block col-lg-9" placeholder="Inschrijven"  id="submit" name="submit" value="Inschrijven">
                     </div>
                 </form>
