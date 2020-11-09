@@ -75,10 +75,10 @@ header {
 }
 
 .button{
-  background-color: #D44719;
-  border-color: #D44719;
-  color: #ffffff;
-  margin: 1rem;
+  background-color: #D44719 !important;
+  border-color: #D44719 !important;
+  color: #ffffff !important;
+  margin: 1rem !important;
 }
 
 .blackline {
