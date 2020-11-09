@@ -5,9 +5,9 @@ ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 1);
 
 define ('DB_HOST', 'localhost');
-define ('DB_USER', 'root');
-define ('DB_PASS', '');
-define ('DB_NAME', 'leden');
+define ('DB_USER', 'janaap');
+define ('DB_PASS', 'Srw362p~');
+define ('DB_NAME', 'niels_lejeune_cosessie');
 
 try {
     $db = new PDO('mysql:host=' . DB_HOST .';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASS);
@@ -143,7 +143,7 @@ if (isset($_POST['submit'])) {
                         <a class="nav-link here" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             ORGANISATIE
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -202,7 +202,7 @@ if (isset($_POST['submit'])) {
                         
                     </div>
                     <div class="row justify-content-lg-center">
-                        <input type="date" name="geboortedatum" class="form-control col-lg-5 mt-3" placeholder="Geboortedatum"value="<?php echo htmlentities($geboortedatum); ?>" required>
+                        <input type="date" name="geboortedatum" class="form-control col-lg-5 mt-3" value="<?php echo htmlentities($geboortedatum); ?>" required>
                         <input type="text" name="geboorteplaats" class="form-control offset-lg-1 col-lg-5 mt-3" placeholder="Geboorteplaats" value="<?php echo htmlentities($geboorteplaats); ?>" required>
                         
                     </div>
@@ -211,7 +211,7 @@ if (isset($_POST['submit'])) {
                         
                     </div>
                     <div class="row justify-content-lg-center mt-5">
-                        <input type="submit" class="btn btn-lg btn-primary btn-block col-lg-9" placeholder="Inschrijven"  id="submit" name="submit" value="Inschrijven">
+                        <input type="submit" class="btn btn-lg btn-primary btn-block col-lg-9" id="submit" name="submit" value="Inschrijven">
                     </div>
                 </form>
             </div>
@@ -226,7 +226,7 @@ if (isset($_POST['submit'])) {
                             <img src="https://media1.tenor.com/images/11771d5e9e588e5d99052acdf63512ee/tenor.gif" class="d-flex w-100" alt="...">
                         </div>
                         <div class="carousel-item" data-interval="4000">
-                            <img src="http://www.flachoppeland.be/images/VulstekeVerbeke.gif" class="d-flex w-100">
+                            <img src="http://www.flachoppeland.be/images/VulstekeVerbeke.gif" class="d-flex w-100" alt="vulestebeke">
                         </div>
                         <div class="carousel-item" data-interval="4000">
                             <img src="http://www.flachoppeland.be/images/finfacts.gif" class="d-flex w-100" alt="...">
