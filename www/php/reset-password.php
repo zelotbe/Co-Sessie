@@ -119,6 +119,7 @@ https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
             </div>
         </div>
     </div>
+    <script src="../js/jquery-3.5.1.slim.min.js"></script>
 </body>
 
 </html>

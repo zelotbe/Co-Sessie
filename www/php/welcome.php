@@ -43,6 +43,7 @@ https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
             <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
         </p>
     </div>
+    <script src="../js/jquery-3.5.1.slim.min.js"></script>
 </body>
 
 </html>
