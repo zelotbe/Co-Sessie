@@ -21,7 +21,7 @@ https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Flac Hoppeland</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/welcomeStyle.css">
 
@@ -43,6 +43,7 @@ https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
             <a href="logout.php" class="btn btn-danger">Sign Out of Your Account</a>
         </p>
     </div>
+    <script src="../js/jquery-3.5.1.slim.min.js"></script>
 </body>
 
 </html>

@@ -113,7 +113,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/quintin.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <title>Inschrijven - Flac Hoppeland</title>
 </head>
 
@@ -349,8 +349,8 @@ if (isset($_POST['submit'])) {
     </footer>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="../js/bootstrap.js"></script>
+    <script src="/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180461284-1"></script>
     <script>
