@@ -102,7 +102,8 @@ if (isset($_POST['submit'])) {
 
 }
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="nl">
 
 <head>
@@ -177,48 +178,48 @@ if (isset($_POST['submit'])) {
         <div></div>
     </header>
     <main>
-            <h2 class="text-center mt-5">Inschrijven 2020-2021</h2>
-            <h3 class="text-center mb-5">Voor nieuwe leden!</h3>
-            <div class="container w-50 mx-auto">
-                <form class="form-signin mt-4" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="on">
-                    <div class="row justify-content-lg-center">
-                        <input type="text" name="voornaam" class="form-control col-lg-5" placeholder="Voornaam" value="<?php echo htmlentities($voornaam); ?>" autofocus required>
-                        <input type="text" name="achternaam" class="form-control offset-lg-1 col-lg-5" placeholder="Achternaam" value="<?php echo htmlentities($achternaam); ?>" required>
-                        
-                    </div>
-                    <div class="row justify-content-lg-center">
-                        <input type="email" name="mail" class="form-control col-lg-11 mt-3" placeholder="E-mail" value="<?php echo htmlentities($mail); ?>" required>
-                        <input type="tel" name="gsm" class="form-control col-lg-11 mt-3" placeholder="Telefoonnummer" value="<?php echo htmlentities($gsm); ?>" required>
-                        
-                    </div>
+        <h2 class="text-center mt-5">Inschrijven 2020-2021</h2>
+        <h3 class="text-center mb-5">Voor nieuwe leden!</h3>
+        <div class="container w-50 mx-auto">
+            <form class="form-signin mt-4" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="on">
+                <div class="row justify-content-lg-center">
+                    <input type="text" name="voornaam" class="form-control col-lg-5" placeholder="Voornaam" value="<?php echo htmlentities($voornaam); ?>" autofocus required>
+                    <input type="text" name="achternaam" class="form-control offset-lg-1 col-lg-5" placeholder="Achternaam" value="<?php echo htmlentities($achternaam); ?>" required>
 
-                    <div class="row justify-content-lg-center">
-                        <input type="text" name="adres" class="form-control col-lg-11 mt-3" placeholder="Adres + nummer" required value="<?php echo htmlentities($adres); ?>">
-                        
-                    </div>
-                    <div class="row justify-content-lg-center">
-                        <input type="text" name="gemeente" class="form-control col-lg-5 mt-3" placeholder="Gemeente" value="<?php echo htmlentities($gemeente); ?>" required>
-                        <input type="text" name="postcode" class="form-control offset-lg-1 col-lg-5 mt-3" placeholder="Postcode" value="<?php echo htmlentities($postcode); ?>" required>
-                        
-                    </div>
-                    <div class="row justify-content-lg-center">
-                        <input type="date" name="geboortedatum" class="form-control col-lg-5 mt-3" value="<?php echo htmlentities($geboortedatum); ?>" required>
-                        <input type="text" name="geboorteplaats" class="form-control offset-lg-1 col-lg-5 mt-3" placeholder="Geboorteplaats" value="<?php echo htmlentities($geboorteplaats); ?>" required>
-                        
-                    </div>
-                    <div class="row justify-content-lg-center">
-                        <input type="text" name="nationaliteit" class="form-control col-lg-11 mt-3" placeholder="Nationaliteit" value="<?php echo htmlentities($nationaliteit); ?>" required>
-                        
-                    </div>
-                    <div class="row justify-content-lg-center mt-5">
-                        <input type="submit" class="btn btn-lg btn-primary btn-block col-lg-9" id="submit" name="submit" value="Inschrijven">
-                    </div>
-                </form>
-            </div>
+                </div>
+                <div class="row justify-content-lg-center">
+                    <input type="email" name="mail" class="form-control col-lg-11 mt-3" placeholder="E-mail" value="<?php echo htmlentities($mail); ?>" required>
+                    <input type="tel" name="gsm" class="form-control col-lg-11 mt-3" placeholder="Telefoonnummer" value="<?php echo htmlentities($gsm); ?>" required>
+
+                </div>
+
+                <div class="row justify-content-lg-center">
+                    <input type="text" name="adres" class="form-control col-lg-11 mt-3" placeholder="Adres + nummer" required value="<?php echo htmlentities($adres); ?>">
+
+                </div>
+                <div class="row justify-content-lg-center">
+                    <input type="text" name="gemeente" class="form-control col-lg-5 mt-3" placeholder="Gemeente" value="<?php echo htmlentities($gemeente); ?>" required>
+                    <input type="text" name="postcode" class="form-control offset-lg-1 col-lg-5 mt-3" placeholder="Postcode" value="<?php echo htmlentities($postcode); ?>" required>
+
+                </div>
+                <div class="row justify-content-lg-center">
+                    <input type="date" name="geboortedatum" class="form-control col-lg-5 mt-3" value="<?php echo htmlentities($geboortedatum); ?>" required>
+                    <input type="text" name="geboorteplaats" class="form-control offset-lg-1 col-lg-5 mt-3" placeholder="Geboorteplaats" value="<?php echo htmlentities($geboorteplaats); ?>" required>
+
+                </div>
+                <div class="row justify-content-lg-center">
+                    <input type="text" name="nationaliteit" class="form-control col-lg-11 mt-3" placeholder="Nationaliteit" value="<?php echo htmlentities($nationaliteit); ?>" required>
+
+                </div>
+                <div class="row justify-content-lg-center mt-5">
+                    <input type="submit" class="btn btn-lg btn-primary btn-block col-lg-9" id="submit" name="submit" value="Inschrijven">
+                </div>
+            </form>
+        </div>
+    </main>
 
 
-
-            <footer class="row w-100">
+    <footer class="row w-100">
         <div class="col-md-1">
         </div>
         <div class="col-md-5">
@@ -228,103 +229,103 @@ if (isset($_POST['submit'])) {
                         <img src="https://media1.tenor.com/images/11771d5e9e588e5d99052acdf63512ee/tenor.gif" class="d-flex w-100" alt="...">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/VulstekeVerbeke.gif" class="d-block w-100">
+                        <img src="http://www.flachoppeland.be/images/VulstekeVerbeke.gif" alt="vulstekeverbeke" class="d-block w-100">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/finfacts.gif" class="d-block  w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/finfacts.gif" class="d-block  w-100" alt="finfacts">
                     </div>
                     <div class="carousel-item" data-interval="2000">
                         <img src="http://www.flachoppeland.be/images/page.gif" class="d-block  w-100" alt="...">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/addelhaize.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/addelhaize.gif" class="d-block w-100" alt="addelhaize">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/decapmaker.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/decapmaker.gif" class="d-block w-100" alt="decapmaker">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/elektrocappoen.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/elektrocappoen.gif" class="d-block w-100" alt="elektrocappoen">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/staelen-recup.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/staelen-recup.gif" class="d-block w-100" alt="staelen-recup">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/peugeot.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/peugeot.gif" class="d-block w-100" alt="peugeot">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/renoma.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/renoma.gif" class="d-block w-100" alt="renoma">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/schoencenter.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/schoencenter.gif" class="d-block w-100" alt="schoencenter">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/schoonaert.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/schoonaert.gif" class="d-block w-100" alt="schoonaert">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/terminus.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/terminus.gif" class="d-block w-100" alt="terminus">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/vandeputte.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/vandeputte.gif" class="d-block w-100" alt="vandeputte">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/vandermarliere.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/vandermarliere.gif" class="d-block w-100" alt="vandermarliere">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/pmo.gif" class="d-block-flex w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/pmo.gif" class="d-block-flex w-100" alt="pmo">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/delanote.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/delanote.gif" class="d-block w-100" alt="delanote">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/alulermytte.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/alulermytte.gif" class="d-block w-100" alt="alulermytte">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/belfius.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/belfius.gif" class="d-block w-100" alt="belfius">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/madeininox.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/madeininox.gif" class="d-block w-100" alt="madeininox">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/drafab.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/drafab.gif" class="d-block w-100" alt="drafab">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/timotuin.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/timotuin.gif" class="d-block w-100" alt="timotuin">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/kbc.gif" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/kbc.gif" class="d-block w-100" alt="kbc">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Boligna.png/" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Boligna.png/" class="d-block w-100" alt="Boligna">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Bouton.png" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Bouton.png" class="d-block w-100" alt="Bouton">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/DerooConstructie.png" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/DerooConstructie.png" class="d-block w-100" alt="DerooConstructie">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Eskimo.png" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Eskimo.png" class="d-block w-100" alt="Eskimo">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/HoteldelaPaix.png" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/HoteldelaPaix.png" class="d-block w-100" alt="HoteldelaPaix">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/HoutskeletbouwDevos.png" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/HoutskeletbouwDevos.png" class="d-block w-100" alt="HoutskeletbouwDevos">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/OptiekLobelle.png" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/OptiekLobelle.png" class="d-block w-100" alt="OptiekLobelle">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/TraiteurPure.png" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/TraiteurPure.png" class="d-block w-100" alt="TraiteurPure">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Verpoort.png" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Verpoort.png" class="d-block w-100" alt="Verpoort">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Decrock_WG.png" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Decrock_WG.png" class="d-block w-100" alt="Decrock_WG">
                     </div>
                     <div class="carousel-item" data-interval="2000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Dejonckheere.JPG" class="d-block w-100" alt="...">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Dejonckheere.JPG" class="d-block w-100" alt="Dejonckheere">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -348,7 +349,6 @@ if (isset($_POST['submit'])) {
     </footer>
 
 
-    </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
