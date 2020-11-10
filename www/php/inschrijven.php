@@ -1,3 +1,108 @@
+<?php
+session_start();
+// Show all errors (for educational purposes)
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 1);
+
+define ('DB_HOST', 'localhost');
+define ('DB_USER', 'janaap'); //janaap
+define ('DB_PASS', 'Srw362p~');//Srw362p~
+define ('DB_NAME', 'niels_lejeune_cosessie');//niels_lejeune_cosessie
+
+try {
+    $db = new PDO('mysql:host=' . DB_HOST .';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASS);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo 'Verbindingsfout: ' .  $e->getMessage();
+    exit;
+}
+
+date_default_timezone_set('Europe/Brussels');
+
+
+$voornaam = isset($_POST['voornaam']) ? (string) $_POST['voornaam'] : '';
+$achternaam = isset($_POST['achternaam']) ? (string) $_POST['achternaam'] : '';
+$mail = isset($_POST['mail']) ? (string) $_POST['mail'] : '';
+$adres = isset($_POST['adres']) ? (string) $_POST['adres'] : '';
+$gemeente = isset($_POST['gemeente']) ? (string) $_POST['gemeente'] : '';
+$postcode = isset($_POST['postcode']) ? (string) $_POST['postcode'] : '';
+$geboortedatum = isset($_POST['geboortedatum']) ? (string) $_POST['geboortedatum'] : '';
+$geboorteplaats = isset($_POST['geboorteplaats']) ? (string) $_POST['geboorteplaats'] : '';
+$nationaliteit = isset($_POST['nationaliteit']) ? (string) $_POST['nationaliteit'] : '';
+$gsm = isset($_POST['gsm']) ? (string) $_POST['gsm'] : '';
+$msgName = '*';
+$msgMessage = '*';
+
+// form is sent: perform formchecking!
+if (isset($_POST['submit'])) {
+
+	$allOk = true;
+
+	// name not empty
+	if (trim($voornaam) === '') {
+		$msgName = 'Gelieve een voornaam in te voeren';
+		$allOk = false;
+	}
+
+	if (trim($achternaam) === '') {
+		$msgMessage = 'Gelieve een achternaam in te voeren';
+		$allOk = false;
+	}
+    if (trim($mail) === '') {
+		$msgMessage = 'Gelieve een e-mailadres in te voeren';
+		$allOk = false;
+	}
+    if (trim($adres) === '') {
+		$msgMessage = 'Gelieve een adres in te voeren';
+		$allOk = false;
+	}
+    if (trim($gemeente) === '') {
+		$msgMessage = 'Gelieve een gemeente in te voeren';
+		$allOk = false;
+	}
+    if (trim($postcode) === '') {
+		$msgMessage = 'Gelieve een postcode in te voeren';
+		$allOk = false;
+	}
+    if (trim($geboortedatum) === '') {
+		$msgMessage = 'Gelieve een geboortedatum in te voeren';
+		$allOk = false;
+	}
+    if (trim($geboorteplaats) === '') {
+		$msgMessage = 'Gelieve een geboorteplaats in te voeren';
+		$allOk = false;
+	}
+     if (trim($nationaliteit) === '') {
+		$msgMessage = 'Gelieve een nationaliteit in te voeren';
+		$allOk = false;
+	}
+     if (trim($gsm) === '') {
+		$msgMessage = 'Gelieve een telefoonnummer in te voeren';
+		$allOk = false;
+	}
+
+	// end of form check. If $allOk still is true, then the form was sent in correctly
+	if ($allOk) {
+		$stmt = $db->prepare('INSERT INTO leden (voornaam, achternaam, mail, adres, gemeente, postcode, geboortedatum, geboorteplaats, nationaliteit, gsm) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+        $stmt->execute(array($voornaam, $achternaam, $mail, $adres, $gemeente, $postcode, $geboortedatum, $geboorteplaats, $nationaliteit, $gsm));
+
+		// the query succeeded, redirect to this very same page
+		if ($db->lastInsertId() !== 0) {
+			header('Location: inschrijven_compleet.php');
+			exit();
+		}
+
+		// the query failed
+		else {
+		    echo 'Databankfout.';
+		    exit;
+		}		
+
+	}
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -5,12 +110,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/quintin.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/quintin.css">
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <title>Inschrijven Compleet! - Flac Hoppeland</title>
+    <title>Inschrijven - Flac Hoppeland</title>
 </head>
 
 <body>
@@ -18,14 +122,11 @@
         <div id="header" class="row">
             <div class="col-lg-1 col-md-0"></div>
             <figure class="col-lg-2 col-md-12" id="logo">
-                <a href="index.html"><img src="images/logo.png" alt="logo van de flachoppeland" /></a>
+                <a href="../index.html"><img src="../images/logo.png" alt="logo van de flachoppeland" /></a>
             </figure>
             <div class="col-md-6 title">
 
                 <h1>FLAC Hoppeland</h1>
-            </div>
-            <div class="col-lg-2">
-                <a href="php/login.php" class="btn button">LOGIN</a>
             </div>
 
         </div>
@@ -40,35 +141,34 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item dropdown">
-                        <a class="nav-link here" href="index.html">Home</a>
+                        <a class="nav-link here" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             ORGANISATIE
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="organisatie/trainers.html">TRAINERS</a>
-                            <a class="dropdown-item" href="organisatie/bestuur.html">BESTUUR</a>
-                            <a class="dropdown-item" href="inschrijven.php">INSCHRIJVEN</a>
-                            <a class="dropdown-item" href="organisatie/kalender.html">KALENDER</a>
+                            <a class="dropdown-item" href="../organisatie/trainers.html">TRAINERS</a>
+                            <a class="dropdown-item" href="../organisatie/bestuur.html">BESTUUR</a>
+                            <a class="dropdown-item" href="../organisatie/kalender.html">KALENDER</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             SPORTIEF
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="sportief/sportief.html#uitrusting">UITRUSTING</a>
-                            <a class="dropdown-item" href="sportief/sportief.html#categorieen">CATEGORIEËN</a>
-                            <a class="dropdown-item" href="sportief/sportief.html#jeugd">JEUGD</a>
-                            <a class="dropdown-item" href="sportief/sportief.html#competieven">COMPETIEVEN</a>
-                            <a class="dropdown-item" href="sportief/sportief.html#joggers">JOGGERS</a>
-                            <a class="dropdown-item" href="sportief/sportief.html#starttorun">START TO RUN</a>
+                            <a class="dropdown-item" href="../sportief/sportief.html#uitrusting">UITRUSTING</a>
+                            <a class="dropdown-item" href="../sportief/sportief.html#categorieen">CATEGORIEËN</a>
+                            <a class="dropdown-item" href="../sportief/sportief.html#jeugd">JEUGD</a>
+                            <a class="dropdown-item" href="../sportief/sportief.html#competieven">COMPETIEVEN</a>
+                            <a class="dropdown-item" href="../sportief/sportief.html#joggers">JOGGERS</a>
+                            <a class="dropdown-item" href="../sportief/sportief.html#starttorun">START TO RUN</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="archief/archief.html">ARCHIEF</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../archief/archief.html">ARCHIEF</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="links/links.html">LINKS &amp; SPONSERS</a>
+                        <a class="nav-link" href="../links/links.html">LINKS &amp; SPONSERS</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="https://flachoppelandwebshop.jonasdekeyzer.ikdoeict.be/">WINKEL</a></li>
                 </ul>
@@ -76,14 +176,44 @@
         </nav>
         <div></div>
     </header>
-
-
     <main>
-        <div class="container" id="compleet">
-            <div class="d-flex h-100 flex-column justify-content-center align-items-center align-items-center">
-                <h1 class="display-4 text-center tekstkleur">Inschrijving compleet!</h1>
-                <p class="lead">Bedankt, we nemen contact met je op voor verdere stappen!</p>
-            </div>
+        <h2 class="text-center mt-5">Inschrijven 2020-2021</h2>
+        <h3 class="text-center mb-5">Voor nieuwe leden!</h3>
+        <div class="container w-50 mx-auto">
+            <form class="form-signin mt-4" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" autocomplete="on">
+                <div class="row justify-content-lg-center">
+                    <input type="text" name="voornaam" class="form-control col-lg-5" placeholder="Voornaam" value="<?php echo htmlentities($voornaam); ?>" autofocus required>
+                    <input type="text" name="achternaam" class="form-control offset-lg-1 col-lg-5" placeholder="Achternaam" value="<?php echo htmlentities($achternaam); ?>" required>
+
+                </div>
+                <div class="row justify-content-lg-center">
+                    <input type="email" name="mail" class="form-control col-lg-11 mt-3" placeholder="E-mail" value="<?php echo htmlentities($mail); ?>" required>
+                    <input type="tel" name="gsm" class="form-control col-lg-11 mt-3" placeholder="Telefoonnummer" value="<?php echo htmlentities($gsm); ?>" required>
+
+                </div>
+
+                <div class="row justify-content-lg-center">
+                    <input type="text" name="adres" class="form-control col-lg-11 mt-3" placeholder="Adres + nummer" required value="<?php echo htmlentities($adres); ?>">
+
+                </div>
+                <div class="row justify-content-lg-center">
+                    <input type="text" name="gemeente" class="form-control col-lg-5 mt-3" placeholder="Gemeente" value="<?php echo htmlentities($gemeente); ?>" required>
+                    <input type="text" name="postcode" class="form-control offset-lg-1 col-lg-5 mt-3" placeholder="Postcode" value="<?php echo htmlentities($postcode); ?>" required>
+
+                </div>
+                <div class="row justify-content-lg-center">
+                    <input type="date" name="geboortedatum" class="form-control col-lg-5 mt-3" value="<?php echo htmlentities($geboortedatum); ?>" required>
+                    <input type="text" name="geboorteplaats" class="form-control offset-lg-1 col-lg-5 mt-3" placeholder="Geboorteplaats" value="<?php echo htmlentities($geboorteplaats); ?>" required>
+
+                </div>
+                <div class="row justify-content-lg-center">
+                    <input type="text" name="nationaliteit" class="form-control col-lg-11 mt-3" placeholder="Nationaliteit" value="<?php echo htmlentities($nationaliteit); ?>" required>
+
+                </div>
+                <div class="row justify-content-lg-center mt-5">
+                    <input type="submit" class="btn btn-lg btn-primary btn-block col-lg-9" id="submit" name="submit" value="Inschrijven">
+                </div>
+            </form>
         </div>
     </main>
 
@@ -218,19 +348,8 @@
     </footer>
 
 
-    <script src="/js/jquery-3.5.1.slim.min.js"></script>
-    <script src="/js/bootstrap.js"></script>
-    <script>
-        (function(w, d) {
-            w.CollectId = "5f859ded69a22830e955678e";
-            var h = d.head || d.getElementsByTagName("head")[0];
-            var s = d.createElement("script");
-            s.setAttribute("type", "text/javascript");
-            s.async = true;
-            s.setAttribute("src", "https://collectcdn.com/launcher.js");
-            h.appendChild(s);
-        })(window, document);
-    </script>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180461284-1"></script>
     <script>
@@ -242,5 +361,8 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-180461284-1');
+
     </script>
-</body></html>
+</body>
+
+</html>
