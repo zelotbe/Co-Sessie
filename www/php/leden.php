@@ -124,110 +124,112 @@ $lid = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     </main>
     <footer class="row w-100">
+        <div class="col-md-1">
+        </div>
         <div class="col-md-5">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-interval="4000">
+                    <div class="carousel-item active" data-interval="2000">
                         <img src="https://media1.tenor.com/images/11771d5e9e588e5d99052acdf63512ee/tenor.gif" class="d-flex w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/VulstekeVerbeke.gif" class="d-flex w-100">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/VulstekeVerbeke.gif" class="d-block w-100">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/finfacts.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/finfacts.gif" class="d-block  w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/page.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/page.gif" class="d-block  w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/addelhaize.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/addelhaize.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/decapmaker.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/decapmaker.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/elektrocappoen.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/elektrocappoen.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/staelen-recup.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/staelen-recup.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/peugeot.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/peugeot.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/renoma.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/renoma.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/schoencenter.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/schoencenter.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/schoonaert.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/schoonaert.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/terminus.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/terminus.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/vandeputte.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/vandeputte.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/vandermarliere.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/vandermarliere.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/pmo.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/pmo.gif" class="d-block-flex w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/delanote.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/delanote.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/alulermytte.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/alulermytte.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/belfius.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/belfius.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/madeininox.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/madeininox.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/drafab.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/drafab.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/timotuin.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/timotuin.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/kbc.gif" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/kbc.gif" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Boligna.png/" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Boligna.png/" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Bouton.png" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Bouton.png" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/DerooConstructie.png" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/DerooConstructie.png" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Eskimo.png" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Eskimo.png" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/HoteldelaPaix.png" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/HoteldelaPaix.png" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/HoutskeletbouwDevos.png" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/HoutskeletbouwDevos.png" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/OptiekLobelle.png" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/OptiekLobelle.png" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/TraiteurPure.png" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/TraiteurPure.png" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Verpoort.png" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Verpoort.png" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Decrock_WG.png" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Decrock_WG.png" class="d-block w-100" alt="...">
                     </div>
-                    <div class="carousel-item" data-interval="4000">
-                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Dejonckheere.JPG" class="d-flex w-100" alt="...">
+                    <div class="carousel-item" data-interval="2000">
+                        <img src="http://www.flachoppeland.be/images/sponsorlogos/Dejonckheere.JPG" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
@@ -242,11 +244,12 @@ $lid = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <div class="col-md-5">
             <div class="mapouter">
-                <div class="gmap_canvas"><iframe height="150" id="gmap_canvas" src="https://maps.google.com/maps?q=Reningelstseweg%2020%2C%208970%20Poperinge&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                <div class="gmap_canvas"><iframe class="w-100" height="150" id="gmap_canvas" src="https://maps.google.com/maps?q=Reningelstseweg%2020%2C%208970%20Poperinge&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
                 </div>
             </div>
         </div>
-
+        <div class="col-md-1">
+        </div>
     </footer>
 
 
