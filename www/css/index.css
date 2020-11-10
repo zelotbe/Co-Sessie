@@ -2,6 +2,10 @@ p{
     text-align: center
 }
 
+body{
+    background-color: #fff6d9a8;
+  }
+
 main{
     margin-top: 20px;
 }
