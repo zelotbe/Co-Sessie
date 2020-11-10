@@ -99,13 +99,11 @@ https://www.tutorialrepublic.com/php-tutorial/php-mysql-login-system.php
 
 <head>
     <meta charset="UTF-8">
-    <title>Login Flac Hoppeland</title>
+    <title>Inloggen - Flac Hoppeland</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/loginStyle.css">
-
-
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
 </head>
 
 <body>

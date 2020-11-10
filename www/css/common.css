@@ -2,6 +2,7 @@
 /*rem instelling*/
 body{
   font-size: 62.5%;
+  font-family: 'ubunturegular', sans-serif !important;
 }
 
 /*achtergrond image optioneel
@@ -25,21 +26,21 @@ body  {
 /*kop*/
 
 @font-face {
-  font-family: myfont;
-  src: url(berlin-sans-fb-demi-bold.TTF);}
+    font-family: 'ubunturegular';
+    src: url('../fonts/ubuntu-regular-webfont.woff2') format('woff2'),
+         url('../fonts/ubuntu-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
+}
  
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap');
-  
-
-
 .title{
   margin-top: 20px;
 }
 
 .title h1{
   font-size: 3.5rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'ubunturegular', sans-serif;
   font-weight: 700;
   color:black;
   text-shadow: 0px 0px 6px rgba(255, 255, 255, 1), 

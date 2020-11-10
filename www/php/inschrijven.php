@@ -5,9 +5,9 @@ ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 1);
 
 define ('DB_HOST', 'localhost');
-define ('DB_USER', 'janaap'); //janaap
-define ('DB_PASS', 'Srw362p~');//Srw362p~
-define ('DB_NAME', 'niels_lejeune_cosessie');//niels_lejeune_cosessie
+define ('DB_USER', 'janaap'); 
+define ('DB_PASS', 'Srw362p~');
+define ('DB_NAME', 'niels_lejeune_cosessie');
 
 try {
     $db = new PDO('mysql:host=' . DB_HOST .';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASS);
